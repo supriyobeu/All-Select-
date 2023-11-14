@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+        body {
+            background-color: blue;
+        }
+        
+        h1 {
+          color: rgb(37, 0, 0);
+        }
+
+        input {width: 20px; height: 20px;}
+        .rapper{width: 400px; height: auto; margin: 150px auto;  background-color: aqua; padding: 50px; border-radius: 25px; }
+        </style>
+    
+</head>
+<body>
+    <div class="rapper">
+    <h1><input type="checkbox" onclick="myBox()" id="selectCheckbox" value="selectCheckbox">
+    Select First Canvas </h1><br>
+    <input type="checkbox" name="color" value="orange">Orange<br>
+    <input type="checkbox" name="color" value="red">Red<br>
+    <input type="checkbox" name="color" value="blue">Blue<br>
+    <input type="checkbox" name="color" value="purple">Purple<br>
+<br/><br/><br/>
+    <h1><input type="checkbox" onclick="myBox2()" id="selectCheckbox2" value="selectCheckbox">
+        Select Secend Canvas  </h1><br>
+        <input type="checkbox" name="color2" value="green">Green<br>
+        <input type="checkbox" name="color2" value="black">Black<br>
+        <input type="checkbox" name="color2" value="white ">White <br>
+
+</div>
+    <script>
+       function myBox() {
+            let mycheckbox=document.getElementById("selectCheckbox");
+            if(mycheckbox.checked == true){
+               let allcheckbox=document.getElementsByName("color");
+               for(let i=0; i<allcheckbox.length; i++){
+                    allcheckbox[i].checked=true;
+               } 
+            }
+
+            else{
+                let allcheckbox=document.getElementsByName("color");
+                for(let i=0; i<allcheckbox.length; i++){
+                    allcheckbox[i].checked=false;
+                }
+
+            }
+       }
+
+       function myBox2() {
+            let mycheckbox=document.getElementById("selectCheckbox2");
+            if(mycheckbox.checked == true){
+               let allcheckbox=document.getElementsByName("color2");
+               for(let i=0; i<allcheckbox.length; i++){
+                    allcheckbox[i].checked=true;
+               } 
+            }
+
+            else{
+                let allcheckbox=document.getElementsByName("color2");
+                for(let i=0; i<allcheckbox.length; i++){
+                    allcheckbox[i].checked=false;
+                }
+
+            }
+       }
+
+
+    </script>
+    
+</body>
+</html>
